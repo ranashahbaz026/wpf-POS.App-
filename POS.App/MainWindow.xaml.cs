@@ -24,6 +24,7 @@ namespace POS.App
             InitializeComponent();
             RibbonTabs.SelectedIndex = 0;
             RibbonContent.Content = new HomeRibbon();
+
         }
 
         private void RibbonTabs_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -47,5 +48,29 @@ namespace POS.App
                 }
             }
         }
+
+        public void OpenWorkspaceTab(string header, UserControl content)
+        {
+            // Check if tab already exists
+            foreach (TabItem tab in WorkspaceTabs.Items)
+            {
+                if (tab.Header.ToString() == header)
+                {
+                    WorkspaceTabs.SelectedItem = tab; // activate
+                    return;
+                }
+            }
+
+            // Create new tab
+            var newTab = new TabItem
+            {
+                Header = header,
+                Content = content
+            };
+
+            WorkspaceTabs.Items.Add(newTab);
+            WorkspaceTabs.SelectedItem = newTab;
+        }
+
     }
 }

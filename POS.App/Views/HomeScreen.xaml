@@ -3,13 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"> 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
 
     <Grid>
-        <Button Style="{DynamicResource MahApps.Styles.Button.Square}"
-                Content="Categories"
-                Width="200" Height="60"
-                FontSize="20"
-                Click="Categories_Click"/>
+        <WrapPanel HorizontalAlignment="Left" Grid.Row="2">
+            <Controls:Tile Title="Billing"
+               Margin="10"
+               Background="Teal"
+               HorizontalTitleAlignment="Right">
+                <iconPacks:PackIconModern Width="40"
+                              Height="40"
+                              Kind="Billing" />
+            </Controls:Tile>
+            <Controls:Tile Title="Card"
+               Margin="10"
+               Background="Teal"
+               HorizontalTitleAlignment="Right">
+                <iconPacks:PackIconModern Width="40"
+                              Height="40"
+                              Kind="Card1" />
+            </Controls:Tile>
+            <Controls:Tile Title="User"
+               Margin="50"
+               Background="Teal"
+               HorizontalTitleAlignment="Right">
+                <iconPacks:PackIconModern Width="40"
+                              Height="40"
+                              Kind="User" />
+            </Controls:Tile>
+            <Controls:Tile Title="Cart"
+               Margin="10"
+               Background="Teal"
+               HorizontalTitleAlignment="Right" RenderTransformOrigin="2.341,-0.113">
+                <iconPacks:PackIconModern Width="40"
+                              Height="40"
+                              Kind="Cart" />
+            </Controls:Tile>
+        </WrapPanel>
     </Grid>
 </UserControl>

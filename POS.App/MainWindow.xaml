@@ -87,43 +87,13 @@
                         Grid.Row="1"
                         Margin="10"/>
 
-        <WrapPanel HorizontalAlignment="Left" Grid.Row="2">
-            <Controls:Tile Title="Billing"
-                       Margin="10"
-                       Background="Teal"
-                       HorizontalTitleAlignment="Right">
-                <iconPacks:PackIconModern Width="40"
-                                      Height="40"
-                                      Kind="Billing" />
-            </Controls:Tile>
-            <Controls:Tile Title="Card"
-                       Margin="10"
-                       Background="Teal"
-                       HorizontalTitleAlignment="Right">
-                <iconPacks:PackIconModern Width="40"
-                                      Height="40"
-                                      Kind="Card1" />
-            </Controls:Tile>
-            <Controls:Tile Title="User"
-                       Margin="50"
-                       Background="Teal"
-                       HorizontalTitleAlignment="Right">
-                <iconPacks:PackIconModern Width="40"
-                                      Height="40"
-                                      Kind="User" />
-            </Controls:Tile>
-            <Controls:Tile Title="Cart"
-                       Margin="10"
-                       Background="Teal"
-                       HorizontalTitleAlignment="Right" RenderTransformOrigin="2.341,-0.113">
-                <iconPacks:PackIconModern Width="40"
-                                      Height="40"
-                                      Kind="Cart" />
-            </Controls:Tile>
-        </WrapPanel>
-
         <!-- Content area for navigation -->
-        <ContentControl x:Name="MainContent" RenderTransformOrigin="0.249,0.222" />
+        <!--<ContentControl x:Name="MainContent" RenderTransformOrigin="0.249,0.222" />-->
+        <TabControl x:Name="WorkspaceTabs"
+                    Grid.Row="2"
+                    Margin="10"
+                    mah:TabControlHelper.CloseButtonEnabled="True"
+                    />
 
     </Grid>
 </mah:MetroWindow>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS.App.Views.Products.ProductCategories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace POS.App.Views.RibbonViews
         public HomeRibbon()
         {
             InitializeComponent();
+        }
+
+        private void OpenProductsTab(object sender, RoutedEventArgs e)
+        {
+            var main = (MainWindow)Application.Current.MainWindow;
+            main.OpenWorkspaceTab("Products", new CategoryListView());
+        }
+
+        private void OpenUsersTab(object sender, RoutedEventArgs e)
+        {
+            var main = (MainWindow)Application.Current.MainWindow;
+            main.OpenWorkspaceTab("Users", new CategoryListView());
         }
     }
 }

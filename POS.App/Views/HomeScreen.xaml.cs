@@ -9,11 +9,6 @@ namespace POS.App.Views
         {
             InitializeComponent();
         }
-
-        private void Categories_Click(object sender, RoutedEventArgs e)
-        {
-            // Navigate to categories screen
-            //((MainWindow)Application.Current.MainWindow).NavigateToCategories(sender, e);
-        }
+         
     }
 }

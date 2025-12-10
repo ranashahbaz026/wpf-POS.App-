@@ -11,13 +11,13 @@
         <StackPanel Margin="20">
             <TextBlock Text="Registration" FontWeight="Bold"/>
             <Button Content="Add Product" Margin="0 5 0 0" Width="130"/>
-            <Button Content="Add User" Width="130"/>
+            <Button Content="Add User" Width="130" Click="OpenProductsTab"/>
         </StackPanel>
 
         <StackPanel Margin="20">
             <TextBlock Text="Sales" FontWeight="Bold"/>
             <Button Content="New Sale" Margin="0 5 0 0" Width="130"/>
-            <Button Content="Return Sale" Width="130"/>
+            <Button Content="Return Sale" Width="130" Click="OpenUsersTab"/>
         </StackPanel>
 
     </StackPanel>
