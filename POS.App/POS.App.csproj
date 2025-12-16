@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\Products\ProductCategories\template.xaml.cs">
+    <Compile Update="Views\Shared\CrudTemplateView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

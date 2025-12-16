@@ -25,8 +25,8 @@ namespace POS.App.Views.Products.ProductCategories
         public CategoryListView()
         {
             InitializeComponent();
-           
+            DataContext = new CategoryListViewModel();
         }
-         
+
     }
 }

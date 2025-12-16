@@ -7,86 +7,40 @@ using System.Windows;
 
 namespace POS.App.ViewModels
 {
-    public partial class CategoryListViewModel : ObservableObject
+    //public partial class CategoryListViewModel : ObservableObject
+    //{
+    //    [ObservableProperty]
+    //    private ObservableCollection<Categories> categories;
+
+    //    [ObservableProperty]
+    //    private Categories selectedCategory;
+
+    public partial class CategoryListViewModel : CrudViewModelBase<Categories>
     {
-        [ObservableProperty]
-        private ObservableCollection<Categories> categories;
-
-        [ObservableProperty]
-        private Categories selectedCategory;
-
         public CategoryListViewModel()
         {
-            // Designer (Visual Studio XAML preview)
-            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
-            {
-                LoadDesignTimeData();
-            }
-            else
-            {
-                LoadRuntimeData();
-            }
+            Items.Add(new Categories { Id = 1, Category_Name = "Tea" });
+            Items.Add(new Categories { Id = 2, Category_Name = "Coffee" });
         }
 
-        private void LoadDesignTimeData()
+        protected override void Add()
         {
-            Categories = new ObservableCollection<Categories>
-            {
-                new Categories { Id = 1, Category_Name = "Beverages" },
-                new Categories { Id = 2, Category_Name = "Snacks" },
-                new Categories { Id = 3, Category_Name = "Cosmetics" }
-            };
+            // Open Add Product popup
         }
 
-        private void LoadRuntimeData()
+        protected override void Update()
         {
-            Categories = new ObservableCollection<Categories>
-            {
-                new Categories { Id = 1, Category_Name = "Beverages" },
-                new Categories { Id = 2, Category_Name = "Snacks" },
-                new Categories { Id = 3, Category_Name = "Cosmetics" }
-            };
-
-
-            //    // 🔥 Replace with your DAL/BBL method
-            //    // Example from your SQL server
-            //    var listFromDb = new List<Category>
-            //    {
-            //        new Category { Id = 1, Name = "Drinks" },
-            //        new Category { Id = 2, Name = "Chocolates" }
-            //    };
-
-            //    Categories = new ObservableCollection<Category>(listFromDb);
+            // Update selected product
         }
 
-        // Commands
-        [RelayCommand]
-        private void Add()
+        protected override void Delete()
         {
-            MessageBox.Show("Add clicked");
+            // Delete selected product
         }
 
-        [RelayCommand]
-        private void Edit()
+        protected override void OnSearch(string text)
         {
-            if (SelectedCategory == null)
-            {
-                MessageBox.Show("Select a category first");
-                return;
-            }
-            MessageBox.Show($"Edit {SelectedCategory.Category_Name}");
-        }
-
-        [RelayCommand]
-        private void Delete()
-        {
-            if (SelectedCategory == null)
-            {
-                MessageBox.Show("Select a category first");
-                return;
-            }
-            MessageBox.Show($"Delete {SelectedCategory.Category_Name}");
+            // Filter product list
         }
     }
-     
 }

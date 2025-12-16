@@ -4,63 +4,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:shared="clr-namespace:POS.App.Views.Shared"
              MinWidth="1024"
              MinHeight="768"
             >
 
-    <Grid Background="#FAFAFA">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <!-- Top Bar -->
-        <DockPanel Margin="0 0 0 15">
-            <TextBlock Text="Product Categories"
-                       FontSize="20"
-                       FontWeight="Bold"
-                       VerticalAlignment="Center" />
-
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Right"
-                        DockPanel.Dock="Right"
-                        Margin="0 0 0 0">
-
-                <Button Content="Add" Width="100" Margin="5"
-                        Command="{Binding AddCommand}"/>
-                <Button Content="Edit" Width="100" Margin="5"
-                        Command="{Binding EditCommand}"/>
-                <Button Content="Delete" Width="100" Margin="5"
-                        Command="{Binding DeleteCommand}"/>
-            </StackPanel>
-        </DockPanel>
-
-        <!-- Data Grid -->
-        <Border Grid.Row="1" Background="White" CornerRadius="4" Padding="5"
-                BorderThickness="1" BorderBrush="#DDD">
-            <DataGrid ItemsSource="{Binding Categories}"
-                      SelectedItem="{Binding SelectedCategory}"
-                      AutoGenerateColumns="False"
-                      IsReadOnly="True"
-                      HeadersVisibility="Column"
-                      RowHeaderWidth="0"
-                      SelectionMode="Single"
-                      SelectionUnit="FullRow">
-
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID"
-                                        Binding="{Binding Id}"
-                                        Width="80"
-                                        FontSize="14"/>
-
-                    <DataGridTextColumn Header="Category Name"
-                                        Binding="{Binding Category_Name}"
-                                        Width="*"
-                                        FontSize="14"/>
-                </DataGrid.Columns>
-
-            </DataGrid>
-        </Border>
-
-    </Grid>
+    <shared:CrudTemplateView />
 </UserControl>
