@@ -34,8 +34,8 @@ namespace POS.App.Views.RibbonViews
 
         private void OpenUsersTab(object sender, RoutedEventArgs e)
         {
-            var main = (MainWindow)Application.Current.MainWindow;
-            main.OpenWorkspaceTab("Users", new CategoryListView());
+            //var main = (MainWindow)Application.Current.MainWindow;
+            //main.OpenWorkspaceTab("Users", new CategoryListView());
         }
     }
 }

@@ -24,7 +24,6 @@ namespace POS.App
             InitializeComponent();
             RibbonTabs.SelectedIndex = 0;
             RibbonContent.Content = new HomeRibbon();
-
         }
 
         private void RibbonTabs_SelectionChanged(object sender, SelectionChangedEventArgs e)

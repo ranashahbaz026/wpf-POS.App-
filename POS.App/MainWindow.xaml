@@ -6,9 +6,10 @@
                  xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                  xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 Title="MainWindow"
-                 Width="800"
-                 Height="450"
+                 Title="POS"
+                 MinWidth="1024"
+                 MinHeight="768"
+                 ResizeMode="CanResize"
                  WindowStartupLocation="CenterScreen"
                  mc:Ignorable="d">
 
@@ -24,7 +25,7 @@
         </Grid.RowDefinitions>
 
         <!-- Ribbon Style Tabs -->
-        <TabControl x:Name="RibbonTabs" Margin="0" Background="#f3f3f3"
+        <TabControl x:Name="RibbonTabs" Margin="0,0,0,63" Background="#f3f3f3"
                     BorderThickness="0"
                     Grid.Row="0"
                     SelectionChanged="RibbonTabs_SelectionChanged">
@@ -36,42 +37,11 @@
             </TabControl.Resources>
             
             <!-- Home Tab -->
-            <TabItem Header="Home">
-                <StackPanel Orientation="Horizontal" Margin="20">
-
-                    <!-- Each button group -->
-                    <StackPanel Margin="10">
-                        <TextBlock FontWeight="Bold" Margin="0 0 0 5">Registration</TextBlock>
-                        <Button Content="Add Product" Width="120" Margin="0 5 0 0"/>
-                        <Button Content="Add User" Width="120"/>
-                    </StackPanel>
-
-                    <StackPanel Margin="10">
-                        <TextBlock FontWeight="Bold" Margin="0 0 0 5">Sales</TextBlock>
-                        <Button Content="New Sale" Width="120" Margin="0 5 0 0"/>
-                        <Button Content="Sale Return" Width="120"/>
-                    </StackPanel>
-
-                </StackPanel>
+            <TabItem Header="Home">                
             </TabItem>
 
             <!-- Reports Tab -->
-            <TabItem Header="Reports">
-                <StackPanel Orientation="Horizontal" Margin="20">
-
-                    <StackPanel Margin="10">
-                        <TextBlock FontWeight="Bold" Margin="0 0 0 5">Daily Reports</TextBlock>
-                        <Button Content="Sales Report" Width="130" Margin="0 5 0 0"/>
-                        <Button Content="Expense Report" Width="130"/>
-                    </StackPanel>
-
-                    <StackPanel Margin="10">
-                        <TextBlock FontWeight="Bold" Margin="0 0 0 5">Monthly Reports</TextBlock>
-                        <Button Content="Monthly Sales" Width="130" Margin="0 5 0 0"/>
-                        <Button Content="Monthly Profit" Width="130"/>
-                    </StackPanel>
-
-                </StackPanel>
+            <TabItem Header="Reports">                
             </TabItem>
 
             <!-- Settings Tab -->
