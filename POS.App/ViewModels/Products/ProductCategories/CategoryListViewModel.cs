@@ -30,7 +30,7 @@ namespace POS.App.ViewModels
 
         protected override void Update()
         {
-            // Update selected product
+            // Update selected product 
         }
 
         protected override void Delete()
