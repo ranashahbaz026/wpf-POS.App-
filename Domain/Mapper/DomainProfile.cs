@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using BLL.ViewModel;
-using Dal.Entities;
-using DAL.DB_Models;
+using Domain.Entities; 
 using System;
 using System.Collections.Generic;
 using System.Linq;

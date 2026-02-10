@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="Models\" />
+    <Folder Include="Services\" />
     <Folder Include="ViewModels\Mahapps\" />
     <Folder Include="Views\Mahapps\" />
   </ItemGroup>
@@ -21,8 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\BL\Domain.csproj" />
-    <ProjectReference Include="..\Dal\DAL.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
